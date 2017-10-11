@@ -1,5 +1,6 @@
 <?php
-namespace zacharyrankin\just_test;
+
+namespace Testing;
 
 use Exception;
 use InvalidArgumentException;
@@ -27,7 +28,7 @@ class Test
     /**
      *
      */
-    public static function create()
+    public static function run()
     {
         self::init();
 

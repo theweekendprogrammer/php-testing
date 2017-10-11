@@ -1,6 +1,6 @@
 {
-    "name": "zacharyrankin/just-test",
-    "description": "minimalistic tap-producing testing framework",
+    "name": "theweekendprogrammer/php-testing",
+    "description": "small testing framework for php",
     "license": "MIT",
     "authors": [
         {
@@ -8,10 +8,9 @@
             "email": "rankin.zachary@gmail.com"
         }
     ],
-    "require": {},
     "autoload": {
         "psr-4": {
-            "zacharyrankin\\just_test\\": "src"
+            "Testing\\": "src"
         }
     }
 }

@@ -1,5 +1,6 @@
 <?php
-namespace zacharyrankin\just_test;
+
+namespace Testing;
 
 class ErrorHandler
 {

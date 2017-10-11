@@ -1,22 +1,24 @@
-# just-test
+# php-testing
 
-minimalistic tap-producing testing framework, inspired by substack/tape.
+small testing framework for php, inspired by substack/tape
 
 ## Usage
 
 ```php
-use just_test\Test;
+<?php
 
-Test::create(
-    "how do you call your test",
-    function (Test $test) {
-        $test->pass("woot");
-    }
-);
+require_once __DIR__ . '/../vendor/autoload.php';
+
+use Testing\Test;
+
+Test::run("checking some sums", function (Test $t) {
+    $t->equals(1 + 1, 2, "one plus one should be two");
+    $t->equals(2 + 2, 4, "two plus two should be four");
+});
 ```
 
 ## TODO
 
  - [ ] More documentation
- - [ ] I still do not like Test::create(), there must be a cleaner syntax
+ - [x] I still do not like Test::create(), there must be a cleaner syntax
  - [ ] Better tests :O

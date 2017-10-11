@@ -1,10 +1,10 @@
 <?php
 
-use zacharyrankin\just_test\Test;
+use Testing\Test;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-Test::create(
+Test::run(
     "we should be testing globs",
     function (Test $test) {
         $test->pass("more testing is good");

@@ -1,10 +1,10 @@
 <?php
 
-use zacharyrankin\just_test\Test;
+use Testing\Test;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-Test::create(
+Test::run(
     "ok does the proper checks",
     function (Test $test) {
         $test->ok(false, "false cannot be okay, okay");
@@ -12,21 +12,21 @@ Test::create(
     }
 );
 
-Test::create(
+Test::run(
     "pass lets the test pass",
     function (Test $test) {
         $test->pass("all good");
     }
 );
 
-Test::create(
+Test::run(
     "fail actually fails",
     function (Test $test) {
         $test->fail("such a good fail");
     }
 );
 
-Test::create(
+Test::run(
     "notOk checks for falsey",
     function (Test $test) {
         $test->notOk(false, "false is not okay");
@@ -34,7 +34,7 @@ Test::create(
     }
 );
 
-Test::create(
+Test::run(
     "throws looks for exceptions",
     function (Test $test) {
         $test->throws(
@@ -54,7 +54,7 @@ Test::create(
     }
 );
 
-Test::create(
+Test::run(
     "doesNotThrow should check exceptions are not thrown",
     function (Test $test) {
         $test->doesNotThrow(
@@ -72,7 +72,7 @@ Test::create(
     }
 );
 
-Test::create(
+Test::run(
     "equals",
     function(Test $test) {
         $test->equals(1, 1, "should be good");
@@ -80,7 +80,7 @@ Test::create(
     }
 );
 
-Test::create(
+Test::run(
     "not equals",
     function(Test $test) {
         $test->notEquals(0, 1, "should be good");
